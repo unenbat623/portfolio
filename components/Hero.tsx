@@ -80,7 +80,7 @@ export default function Hero() {
 
           <motion.p
             {...fade(0.2)}
-            className="mt-7 max-w-[34rem] text-[15px] leading-relaxed text-[var(--color-fg-muted)] md:text-base"
+            className="mt-7 max-w-[34rem] text-[15px] leading-relaxed text-[var(--color-fg-muted)] md:text-base xl:max-w-[30rem]"
           >
             {t(hero.description)}
           </motion.p>
@@ -116,7 +116,7 @@ export default function Hero() {
       <motion.pre
         {...fade(0.4)}
         aria-hidden
-        className="pointer-events-none absolute bottom-[24%] left-[48%] hidden max-w-[22rem] font-mono text-[13px] leading-[1.9] text-[rgba(0,255,65,0.62)] xl:block"
+        className="pointer-events-none absolute bottom-[24%] left-[52%] hidden max-w-[22rem] font-mono text-[13px] leading-[1.9] text-[rgba(0,255,65,0.62)] xl:block"
       >
         {hero.snippet.map((line, i) => (
           <span key={i} className="block whitespace-pre">
