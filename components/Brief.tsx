@@ -49,7 +49,7 @@ export default function Brief() {
               <button
                 type="button"
                 onClick={copy}
-                className="rounded-full border border-[var(--color-line-strong)] px-3 py-1 font-mono text-[10.5px] uppercase tracking-[0.14em] text-[var(--color-fg-dim)] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+                className="tap rounded-full border border-[var(--color-line-strong)] px-4 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.14em] text-[var(--color-fg-dim)] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
               >
                 {copied ? t(brief.copied) : t(brief.copy)}
               </button>

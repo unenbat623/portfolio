@@ -38,7 +38,8 @@ export default function SmoothScroll() {
       if (!el) return;
 
       event.preventDefault();
-      lenis.scrollTo(el as HTMLElement, { offset: -88 });
+      // Lenis honours the target's scroll-margin-top, so no extra offset here.
+      lenis.scrollTo(el as HTMLElement);
     };
 
     document.addEventListener("click", onClick);

@@ -44,7 +44,8 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 7rem;
+  /* Anchor offset lives on the sections themselves (scroll-mt-28) so it is
+     not applied twice — once here and once there. */
   -webkit-text-size-adjust: 100%;
 }
 
@@ -117,6 +118,36 @@ body {
 .hairline {
   height: 1px;
   background: var(--color-line);
+}
+
+/* ============================================================
+   TOUCH TARGETS
+   Grow the hit area to 44px on touch devices only, so the desktop
+   layout keeps its tighter rhythm.
+   ============================================================ */
+@media (pointer: coarse) {
+  .tap {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .tap-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* iOS Safari zooms the page when a focused field is under 16px. */
+@media (max-width: 767px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
 }
 
 /* ============================================================

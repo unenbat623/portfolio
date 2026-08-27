@@ -83,7 +83,7 @@ export default function Services() {
 
               <a
                 href="#contact"
-                className="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--color-accent)] transition-opacity hover:opacity-75"
+                className="tap mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--color-accent)] transition-opacity hover:opacity-75"
               >
                 {t(services.cta)}
                 <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">

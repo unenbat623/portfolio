@@ -33,7 +33,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden pt-[9.5rem] pb-24 md:pt-[11rem] md:pb-32"
+      className="relative overflow-hidden pt-[8.5rem] pb-16 sm:pt-[9.5rem] sm:pb-20 lg:pt-[11rem] lg:pb-32"
     >
       <div className="dot-grid pointer-events-none absolute inset-0 opacity-70" />
 
@@ -85,16 +85,19 @@ export default function Hero() {
             {t(hero.description)}
           </motion.p>
 
-          <motion.div {...fade(0.27)} className="mt-10 flex flex-wrap items-center gap-3">
+          <motion.div
+          {...fade(0.27)}
+          className="mt-10 flex flex-col items-stretch gap-3 min-[420px]:flex-row min-[420px]:flex-wrap min-[420px]:items-center"
+        >
             <a
               href="#contact"
-              className="rounded-full bg-[var(--color-fg)] px-6 py-3 text-[15px] font-medium text-black transition-opacity hover:opacity-85"
+              className="rounded-full bg-[var(--color-fg)] px-6 py-3.5 text-center text-[15px] font-medium text-black transition-opacity hover:opacity-85"
             >
               {t(hero.ctaPrimary)}
             </a>
             <a
               href="#work"
-              className="rounded-full border border-[var(--color-line-strong)] px-6 py-3 text-[15px] font-medium text-[var(--color-fg)] transition-colors hover:border-[var(--color-fg-dim)]"
+              className="rounded-full border border-[var(--color-line-strong)] px-6 py-3.5 text-center text-[15px] font-medium text-[var(--color-fg)] transition-colors hover:border-[var(--color-fg-dim)]"
             >
               {t(hero.ctaSecondary)}
             </a>
@@ -102,7 +105,7 @@ export default function Hero() {
               href={profile.cv}
               target="_blank"
               rel="noreferrer noopener"
-              className="group inline-flex items-center gap-2 rounded-full border border-[rgba(0,255,65,0.32)] px-5 py-3 font-mono text-[12px] uppercase tracking-[0.14em] text-[var(--color-accent)] transition-colors hover:bg-[rgba(0,255,65,0.07)]"
+              className="group inline-flex items-center justify-center gap-2 rounded-full border border-[rgba(0,255,65,0.32)] px-5 py-3.5 font-mono text-[12px] uppercase tracking-[0.14em] text-[var(--color-accent)] transition-colors hover:bg-[rgba(0,255,65,0.07)]"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
               {t(hero.ctaTertiary)}

@@ -52,7 +52,7 @@ export default function Work() {
                 setExpanded(false);
               }}
               aria-pressed={filter === f.id}
-              className={`rounded-full border px-4 py-2 font-mono text-[11px] uppercase tracking-[0.14em] transition-colors ${
+              className={`tap rounded-full border px-4 py-2.5 font-mono text-[11px] uppercase tracking-[0.14em] transition-colors ${
                 filter === f.id
                   ? "border-[var(--color-accent)] text-[var(--color-accent)]"
                   : "border-[var(--color-line-strong)] text-[var(--color-fg-dim)] hover:text-[var(--color-fg)]"
@@ -109,7 +109,7 @@ export default function Work() {
                       href={project.href}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-line-strong)] px-3.5 py-1.5 text-[13px] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+                      className="tap inline-flex items-center gap-1.5 rounded-full border border-[var(--color-line-strong)] px-4 py-2 text-[13px] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
                     >
                       {t(work.cta)}
                       <ArrowUpRight className="h-3.5 w-3.5" />
@@ -125,7 +125,7 @@ export default function Work() {
                       href={project.repo}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-line-strong)] px-3.5 py-1.5 text-[13px] text-[var(--color-fg-dim)] transition-colors hover:border-[var(--color-fg-dim)] hover:text-[var(--color-fg)]"
+                      className="tap inline-flex items-center gap-1.5 rounded-full border border-[var(--color-line-strong)] px-4 py-2 text-[13px] text-[var(--color-fg-dim)] transition-colors hover:border-[var(--color-fg-dim)] hover:text-[var(--color-fg)]"
                     >
                       <GithubIcon className="h-3.5 w-3.5" />
                       {t(work.repoCta)}
@@ -144,7 +144,7 @@ export default function Work() {
             <button
               type="button"
               onClick={() => setExpanded((v) => !v)}
-              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-line-strong)] px-6 py-3 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--color-fg-dim)] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+              className="tap inline-flex items-center gap-2 rounded-full border border-[var(--color-line-strong)] px-6 py-3.5 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--color-fg-dim)] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
             >
               {expanded ? t(work.showLess) : `${t(work.showAll)} (${hiddenCount})`}
               <span aria-hidden>{expanded ? "↑" : "↓"}</span>

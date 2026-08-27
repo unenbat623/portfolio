@@ -26,7 +26,7 @@ export default function Dock() {
   }, [still]);
 
   const button =
-    "flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-line-strong)] bg-black/70 text-[var(--color-fg-dim)] backdrop-blur transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]";
+    "h-11 w-11 items-center justify-center rounded-full border border-[var(--color-line-strong)] bg-black/70 text-[var(--color-fg-dim)] backdrop-blur transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]";
 
   return (
     <>
@@ -35,7 +35,7 @@ export default function Dock() {
         onClick={() => setStill((v) => !v)}
         aria-pressed={still}
         aria-label={still ? "Resume background animation" : "Pause background animation"}
-        className={`fixed bottom-6 left-6 z-50 ${button} ${
+        className={`fixed bottom-6 left-6 z-50 hidden sm:inline-flex ${button} ${
           still ? "text-[var(--color-accent)]" : ""
         }`}
       >
@@ -46,7 +46,7 @@ export default function Dock() {
         type="button"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label={t(ui.backToTop)}
-        className={`fixed bottom-6 right-6 z-50 ${button} ${
+        className={`fixed bottom-6 right-6 z-50 inline-flex ${button} ${
           shown ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       >

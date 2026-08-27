@@ -70,7 +70,7 @@ export default function Footer() {
                     <li key={item.id}>
                       <a
                         href={`#${item.id}`}
-                        className="text-[15px] text-[var(--color-fg-muted)] transition-colors hover:text-[var(--color-accent)]"
+                        className="tap text-[15px] text-[var(--color-fg-muted)] transition-colors hover:text-[var(--color-accent)]"
                       >
                         {t(item.label)}
                       </a>
@@ -93,7 +93,7 @@ export default function Footer() {
                     href={link.href}
                     target={link.href.startsWith("http") ? "_blank" : undefined}
                     rel="noreferrer noopener"
-                    className="inline-flex items-center gap-1 font-mono text-[12.5px] text-[var(--color-fg-muted)] transition-colors hover:text-[var(--color-accent)]"
+                    className="tap inline-flex items-center gap-1 font-mono text-[12.5px] text-[var(--color-fg-muted)] transition-colors hover:text-[var(--color-accent)]"
                   >
                     {link.label}
                     {link.href.startsWith("http") && (
@@ -110,7 +110,7 @@ export default function Footer() {
             <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--color-fg-dim)]">
               {t(footerExtra.socials)}
             </h3>
-            <div className="mt-5 flex flex-wrap gap-4">
+            <div className="mt-4 flex flex-wrap gap-1 sm:mt-5 sm:gap-4">
               {socials.map(({ key, href, Icon }) => (
                 <a
                   key={key}
@@ -118,7 +118,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label={key}
-                  className="text-[var(--color-fg-dim)] transition-colors hover:text-[var(--color-accent)]"
+                  className="tap-icon text-[var(--color-fg-dim)] transition-colors hover:text-[var(--color-accent)]"
                 >
                   <Icon className="h-[18px] w-[18px]" />
                 </a>
@@ -150,7 +150,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="rounded-full border border-[var(--color-line-strong)] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--color-fg-dim)] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+              className="tap rounded-full border border-[var(--color-line-strong)] px-5 py-3.5 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--color-fg-dim)] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
             >
               {subscribed
                 ? t(footerExtra.newsletter.done)

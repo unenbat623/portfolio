@@ -71,7 +71,7 @@ export default function Header() {
         <div className="container-x flex h-[68px] items-center justify-between gap-6">
           <a
             href="#top"
-            className="font-display text-[19px] font-semibold tracking-tight text-[var(--color-fg)]"
+            className="tap shrink-0 font-display text-[17px] font-semibold tracking-tight whitespace-nowrap text-[var(--color-fg)] sm:text-[19px]"
           >
             {profile.brand}
           </a>
@@ -101,7 +101,7 @@ export default function Header() {
                     type="button"
                     onClick={() => setLang(code)}
                     aria-pressed={lang === code}
-                    className={`uppercase transition-colors ${
+                    className={`tap-icon uppercase transition-colors ${
                       lang === code
                         ? "text-[var(--color-accent)]"
                         : "text-[var(--color-fg-faint)] hover:text-[var(--color-fg)]"
@@ -121,7 +121,7 @@ export default function Header() {
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label={label}
-                  className="text-[var(--color-fg-dim)] transition-colors hover:text-[var(--color-accent)]"
+                  className="tap-icon text-[var(--color-fg-dim)] transition-colors hover:text-[var(--color-accent)]"
                 >
                   <Icon className="h-[17px] w-[17px]" />
                 </a>
@@ -133,7 +133,7 @@ export default function Header() {
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? t(ui.close) : t(ui.menu)}
               aria-expanded={open}
-              className="flex h-9 w-9 items-center justify-center rounded-md border border-[var(--color-line-strong)] text-[var(--color-fg)] lg:hidden"
+              className="flex h-11 w-11 items-center justify-center rounded-md border border-[var(--color-line-strong)] text-[var(--color-fg)] lg:hidden"
             >
               <span className="relative block h-3 w-4">
                 <span
@@ -161,7 +161,7 @@ export default function Header() {
             transition={{ duration: 0.25 }}
             className="fixed inset-0 z-[999] bg-black/95 backdrop-blur-xl lg:hidden"
           >
-            <nav className="container-x flex h-full flex-col justify-center gap-1 pb-16">
+            <nav className="container-x flex h-full flex-col justify-center gap-1 overflow-y-auto py-24">
               {nav.map((item, i) => (
                 <motion.a
                   key={item.id}
