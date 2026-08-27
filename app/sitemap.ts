@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://example.com"; // TODO: домэйноо бичнэ үү
+const siteUrl = "https://portfolio-pied-six-dry6wymwrj.vercel.app"; // өөрийн домэйн авбал энд солино
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

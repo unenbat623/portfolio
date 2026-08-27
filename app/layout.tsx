@@ -23,7 +23,7 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://example.com"; // TODO: өөрийн домэйнээ бичнэ үү
+const siteUrl = "https://portfolio-pied-six-dry6wymwrj.vercel.app"; // өөрийн домэйн авбал энд солино
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

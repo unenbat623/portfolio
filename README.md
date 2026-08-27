@@ -1,5 +1,10 @@
 # B. Unenbat — Portfolio
 
+**Амьд сайт:** https://portfolio-pied-six-dry6wymwrj.vercel.app
+**Repo:** https://github.com/unenbat623/portfolio
+
+`main` руу push хийх бүрд Vercel автоматаар deploy хийнэ.
+
 `rubenmarcus.dev`-ийн бүтэц, өнгө, layout-г дагасан хувийн portfolio.
 Хар дэвсгэр + matrix ногоон (`#00ff41`), EN/MN хос хэл.
 Next.js 15 (App Router) + TypeScript + Tailwind CSS v4 + Three.js + Framer Motion.
@@ -57,8 +62,15 @@ Template-д `from_name`, `from_email`, `subject`, `message` талбарууд �
 Түлхүүр байхгүй бол форм нь автоматаар `mailto:` рүү шилжинэ — тэгэхээр
 хоосон deploy хийсэн ч ажиллана.
 
-**Deploy хийхдээ** эдгээр гурван хувьсагчийг Vercel-ийн Environment
-Variables хэсэгт нэмэхээ мартуузай.
+Гурван хувьсагч Vercel дээр аль хэдийн тохируулагдсан (production,
+preview, development гурвуулан).
+
+> **Анхаар:** EmailJS дээрх Gmail холболт тань тасарсан байна —
+> сервер `Gmail_API: Invalid grant. Please reconnect your Gmail account`
+> гэж хариулж байна. [dashboard.emailjs.com](https://dashboard.emailjs.com/admin)
+> → Email Services → Gmail service → **Reconnect** дарж засна.
+> Түүнийг зассан даруйд форм ажиллаж эхэлнэ; тэр болтол зочид
+> "мэйл програмаараа илгээх" fallback линкээр холбогдоно.
 
 ## Бүтэц
 
@@ -140,6 +152,11 @@ public/
 
 ## Deploy
 
-Vercel дээр repo-гоо холбоод, дээрх 3 environment variable-ыг нэмнэ.
-`app/layout.tsx`, `app/robots.ts`, `app/sitemap.ts` доторх `siteUrl`-ыг
-өөрийн домэйнээр солихоо мартуузай.
+Аль хэдийн тохируулагдсан: GitHub repo Vercel project-той холбогдсон
+тул `main` руу push хийхэд production deploy автоматаар явна. Pull
+request бүрд preview URL үүснэ.
+
+Өөрийн домэйн (жишээ нь `unenbat.dev`) авбал:
+
+1. Vercel → Project → Settings → Domains дээр нэмнэ
+2. `app/layout.tsx`, `app/robots.ts`, `app/sitemap.ts` доторх `siteUrl`-ыг солино
