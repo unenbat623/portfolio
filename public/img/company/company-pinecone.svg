@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Pinecone full-stack development">
+  <defs>
+    <linearGradient id="bg" x1="76" y1="46" x2="430" y2="462" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ecfdf5"/>
+      <stop offset="1" stop-color="#dcfce7"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="155" y1="118" x2="355" y2="365" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22c55e"/>
+      <stop offset="1" stop-color="#15803d"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#14532d" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="180" fill="#ffffff" opacity=".82"/>
+  <g filter="url(#shadow)">
+    <path d="M256 78c62 61 101 124 101 184 0 71-45 123-101 123s-101-52-101-123c0-60 39-123 101-184Z" fill="url(#leaf)"/>
+    <path d="M256 111v274" stroke="#f8fafc" stroke-width="22" stroke-linecap="round"/>
+    <path d="M193 226h126M179 280h154" stroke="#f8fafc" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <g fill="none" stroke="#0f172a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" opacity=".9">
+    <path d="M145 177 102 220l43 43"/>
+    <path d="M367 177l43 43-43 43"/>
+  </g>
+  <path d="M231 425h50" stroke="#16a34a" stroke-width="18" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Tixy Digital">
+  <defs>
+    <linearGradient id="bg" x1="68" y1="48" x2="448" y2="464" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="96" y="138" width="320" height="236" rx="48" fill="#0b1020"/>
+  <g transform="translate(127 180)">
+    <rect x="0" y="0" width="88" height="88" rx="18" fill="#4f46e5"/>
+    <path d="M44 12v64M12 44h64M25 25l38 38M63 25 25 63" stroke="#c7d2fe" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="44" cy="44" r="10" fill="#ffffff"/>
+  </g>
+  <text x="258" y="252" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="74" font-weight="800" fill="#ffffff">tixy</text>
+  <text x="256" y="318" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="2" fill="#a5b4fc">DIGITAL</text>
+</svg>

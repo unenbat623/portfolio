@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
+  <!-- Placeholder subject for the matrix portrait effect.
+       Swap in your own photo: save it as public/portrait.jpg and point
+       MatrixPortrait's `src` at it. Light areas become bright green. -->
+  <rect width="900" height="1100" fill="#000"/>
+  <defs>
+    <radialGradient id="skin" cx="45%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#f2f2f2"/>
+      <stop offset="65%" stop-color="#9a9a9a"/>
+      <stop offset="100%" stop-color="#3a3a3a"/>
+    </radialGradient>
+    <linearGradient id="torso" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e8e8e"/>
+      <stop offset="100%" stop-color="#242424"/>
+    </linearGradient>
+    <linearGradient id="deskLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcdcdc"/>
+      <stop offset="100%" stop-color="#4a4a4a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- shoulders / torso -->
+  <path d="M120 1100 Q140 800 330 740 L570 740 Q760 800 780 1100 Z" fill="url(#torso)"/>
+  <!-- neck -->
+  <path d="M390 640 h120 v130 q-60 40 -120 0 Z" fill="#6f6f6f"/>
+  <!-- head -->
+  <ellipse cx="450" cy="440" rx="175" ry="215" fill="url(#skin)"/>
+  <!-- brow / eye shadow -->
+  <path d="M320 415 q60 -35 120 -8" stroke="#2a2a2a" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M480 407 q60 -27 120 8" stroke="#2a2a2a" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <!-- jaw shading -->
+  <path d="M300 520 q150 150 300 0" stroke="#3d3d3d" stroke-width="26" fill="none" opacity="0.65"/>
+  <!-- headphones -->
+  <path d="M255 415 q195 -250 390 0" stroke="#e8e8e8" stroke-width="26" fill="none" stroke-linecap="round"/>
+  <rect x="196" y="390" width="78" height="150" rx="36" fill="#efefef"/>
+  <rect x="626" y="390" width="78" height="150" rx="36" fill="#efefef"/>
+  <!-- laptop -->
+  <path d="M250 1010 L650 1010 L730 1100 L170 1100 Z" fill="url(#deskLight)"/>
+  <path d="M300 900 L600 900 L650 1005 L250 1005 Z" fill="#c9c9c9"/>
+  <!-- hands -->
+  <ellipse cx="330" cy="960" rx="62" ry="34" fill="#bdbdbd"/>
+  <ellipse cx="575" cy="960" rx="62" ry="34" fill="#bdbdbd"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Tavan Bogd enterprise GitLab workflow">
+  <defs>
+    <linearGradient id="bg" x1="70" y1="43" x2="440" y2="468" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff7ed"/>
+      <stop offset="1" stop-color="#fee2e2"/>
+    </linearGradient>
+    <linearGradient id="red" x1="157" y1="98" x2="355" y2="342" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ef4444"/>
+      <stop offset="1" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#7f1d1d" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="256" cy="205" r="118" fill="url(#red)" filter="url(#shadow)"/>
+  <path d="M178 236 256 102l78 134h-49l-29-52-29 52h-49Z" fill="#ffffff"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M140 370h232" stroke="#991b1b" stroke-width="20"/>
+    <path d="M166 370c0-36 29-65 65-65h50c36 0 65 29 65 65" stroke="#ef4444" stroke-width="18"/>
+    <path d="M198 405h116" stroke="#f97316" stroke-width="16"/>
+  </g>
+  <g>
+    <circle cx="151" cy="370" r="27" fill="#111827"/>
+    <circle cx="256" cy="305" r="27" fill="#111827"/>
+    <circle cx="361" cy="370" r="27" fill="#111827"/>
+    <path d="M151 370 256 305l105 65" fill="none" stroke="#111827" stroke-width="14" stroke-linecap="round"/>
+  </g>
+</svg>

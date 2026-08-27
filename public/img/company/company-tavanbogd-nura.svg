@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Tavan Bogd NURA">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#061943"/>
+      <stop offset=".55" stop-color="#0b3b7b"/>
+      <stop offset="1" stop-color="#082048"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".48" r=".72">
+      <stop stop-color="#38bdf8" stop-opacity=".55"/>
+      <stop offset=".45" stop-color="#2563eb" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#38bdf8" flood-opacity=".3"/>
+    </filter>
+  </defs>
+  <rect width="640" height="360" rx="42" fill="url(#bg)"/>
+  <rect width="640" height="360" rx="42" fill="url(#glow)"/>
+  <g stroke="#60a5fa" stroke-width="2" opacity=".52">
+    <path d="M0 292h640M0 324h640M42 260l-36 100M112 250 72 360M184 242 156 360M254 236 240 360M320 232v128M386 236l14 124M456 242l28 118M528 250l40 110M598 260l36 100"/>
+    <path d="M42 260c92 26 190 37 278 37s186-11 278-37M18 320c107 17 206 24 302 24s195-7 302-24"/>
+  </g>
+  <g fill="#93c5fd" opacity=".85">
+    <circle cx="116" cy="245" r="4"/>
+    <circle cx="186" cy="271" r="3"/>
+    <circle cx="251" cy="238" r="4"/>
+    <circle cx="402" cy="258" r="3"/>
+    <circle cx="506" cy="239" r="4"/>
+    <circle cx="548" cy="285" r="3"/>
+    <circle cx="466" cy="78" r="5"/>
+    <circle cx="428" cy="112" r="4"/>
+    <circle cx="496" cy="124" r="3"/>
+  </g>
+  <g filter="url(#soft)">
+    <ellipse cx="320" cy="125" rx="154" ry="58" fill="none" stroke="#e0f2fe" stroke-width="7"/>
+    <path d="M188 145 267 91l32 38 36-53 116 94-88-29-38 22-37-25-26 24-32-27-42 10Z" fill="#ffffff"/>
+    <path d="M265 123 297 91l23 46 23-26 67 48-76-25-28 21-29-21-23 21-31-17-35 7Z" fill="#dbeafe"/>
+  </g>
+  <text x="320" y="245" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="900" font-style="italic" letter-spacing="2" fill="#ffffff">TAVAN BOGD NURA</text>
+  <text x="320" y="282" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-style="italic" fill="#dbeafe">Joint efforts - Key to success</text>
+</svg>

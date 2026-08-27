@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN TOKENS — matched to the reference build
+   ============================================================ */
+@theme {
+  --color-bg: #000000;
+  --color-surface: rgba(134, 239, 172, 0.035);
+  --color-surface-hi: rgba(134, 239, 172, 0.055);
+
+  --color-line: rgba(134, 239, 172, 0.1);
+  --color-line-strong: rgba(134, 239, 172, 0.18);
+  --color-line-bright: rgba(134, 239, 172, 0.32);
+
+  --color-fg: #f5f1ea;
+  --color-fg-muted: rgba(245, 241, 234, 0.72);
+  --color-fg-dim: rgba(245, 241, 234, 0.55);
+  --color-fg-faint: rgba(245, 241, 234, 0.35);
+
+  --color-accent: #00ff41;
+  --color-accent-soft: #4ade80;
+  --color-accent-deep: #15803d;
+
+  --font-display: var(--font-gabarito), "Space Grotesk", system-ui, sans-serif;
+  --font-sans: var(--font-gabarito), var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-mono-jb), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --ease-default: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-emphasis: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  --gutter-x: clamp(1.5rem, 5vw, 3.5rem);
+  --content-max: 1200px;
+  --strip-h: 32px;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(134, 239, 172, 0.2);
+  border-radius: 99px;
+  border: 2px solid #000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(134, 239, 172, 0.35);
+}
+
+:focus-visible {
+  outline: 2px solid rgba(0, 255, 65, 0.72);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   LAYOUT UTILITIES
+   ============================================================ */
+@utility container-x {
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter-x);
+}
+
+@utility section-y {
+  padding-block: clamp(5rem, 11vw, 9rem);
+}
+
+/* Site-wide dotted grid */
+.dot-grid {
+  background-image: radial-gradient(
+    rgba(134, 239, 172, 0.09) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
+/* Rounded panel used by the numbers / client / contact blocks */
+.panel {
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+  background: var(--color-surface);
+}
+
+.hairline {
+  height: 1px;
+  background: var(--color-line);
+}
+
+/* ============================================================
+   TYPE HELPERS
+   ============================================================ */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-fg-dim);
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Film grain */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ============================================================
+   MARQUEE
+   ============================================================ */
+@keyframes marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 60s linear infinite;
+}
+
+/* ============================================================
+   CARET (hero code snippet)
+   ============================================================ */
+@keyframes caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.caret {
+  animation: caret-blink 1.05s step-end infinite;
+}
+
+/* ============================================================
+   LENIS SMOOTH SCROLL
+   ============================================================ */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ============================================================
+   MOTION PREFERENCES
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .marquee-track,
+  .caret {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
