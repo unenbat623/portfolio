@@ -683,8 +683,12 @@ export const contact = {
     sending: { en: "Sending…", mn: "Илгээж байна…" } satisfies T,
     sent: { en: "Message sent — thank you!", mn: "Мессеж илгээгдлээ — баярлалаа!" } satisfies T,
     error: {
-      en: "Could not send. Email me directly instead.",
-      mn: "Илгээж чадсангүй. Шууд мэйл бичээрэй.",
+      en: "Could not send right now —",
+      mn: "Одоогоор илгээж чадсангүй —",
+    } satisfies T,
+    fallback: {
+      en: "open it in your mail app",
+      mn: "мэйл програмаараа илгээх",
     } satisfies T,
   },
 };

@@ -14,10 +14,21 @@ const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 type Status = "idle" | "sending" | "sent" | "error";
 
+/** Builds a mailto: link carrying whatever the visitor already typed. */
+function mailtoFrom(form: HTMLFormElement, to: string) {
+  const data = new FormData(form);
+  const subject = encodeURIComponent(String(data.get("subject") ?? ""));
+  const body = encodeURIComponent(
+    `${data.get("message") ?? ""}\n\n— ${data.get("from_name") ?? ""} (${data.get("from_email") ?? ""})`,
+  );
+  return `mailto:${to}?subject=${subject}&body=${body}`;
+}
+
 export default function Contact() {
   const { t } = useLang();
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<Status>("idle");
+  const [fallbackHref, setFallbackHref] = useState("");
   const [copied, setCopied] = useState(false);
 
   const copyEmail = async () => {
@@ -34,14 +45,9 @@ export default function Contact() {
     event.preventDefault();
     if (!formRef.current) return;
 
-    // Without keys the form falls back to opening the user's mail client.
+    // Without keys the form falls back to opening the visitor's mail client.
     if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
-      const data = new FormData(formRef.current);
-      const subject = encodeURIComponent(String(data.get("subject") ?? ""));
-      const body = encodeURIComponent(
-        `${data.get("message") ?? ""}\n\n— ${data.get("from_name") ?? ""} (${data.get("from_email") ?? ""})`,
-      );
-      window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
+      window.location.href = mailtoFrom(formRef.current, profile.email);
       return;
     }
 
@@ -51,6 +57,9 @@ export default function Contact() {
       setStatus("sent");
       formRef.current.reset();
     } catch {
+      // The provider can fail on its own (a disconnected mailbox, a quota).
+      // Never dead-end the visitor — hand them the same message as a mailto.
+      setFallbackHref(mailtoFrom(formRef.current, profile.email));
       setStatus("error");
     }
   };
@@ -160,7 +169,13 @@ export default function Contact() {
                 )}
                 {status === "error" && (
                   <span className="font-mono text-[12px] text-[#ff6b6b]">
-                    {t(contact.form.error)}
+                    {t(contact.form.error)}{" "}
+                    <a
+                      href={fallbackHref}
+                      className="underline underline-offset-2 hover:text-[var(--color-accent)]"
+                    >
+                      {t(contact.form.fallback)}
+                    </a>
                   </span>
                 )}
               </div>
