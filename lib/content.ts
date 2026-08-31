@@ -142,7 +142,7 @@ export const numbers = {
     // Бүгд бодит өгөгдлөөс тоологдсон — төслийн жагсаалт, ур чадварын жагсаалт,
     // GitHub профайлаас. Шинэ ажил нэмэгдэх бүрд эдгээрийг шинэчилнэ.
     { value: 29, suffix: "", label: { en: "projects built", mn: "бүтээсэн төсөл" } },
-    { value: 22, suffix: "", label: { en: "public GitHub repos", mn: "нээлттэй GitHub repo" } },
+    { value: 23, suffix: "", label: { en: "public GitHub repos", mn: "нээлттэй GitHub repo" } },
     { value: 22, suffix: "", label: { en: "live deployments", mn: "ажиллаж буй deploy" } },
     { value: 46, suffix: "", label: { en: "tools and technologies", mn: "хэрэгсэл, технологи" } },
     { value: 4, suffix: "", label: { en: "companies worked with", mn: "компанид ажилласан" } },
@@ -246,6 +246,7 @@ export const work = {
       tags: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "SQLite / libSQL", "Three.js"],
       image: "/img/projects/cafely.jpg",
       category: "web app",
+      repo: "https://github.com/unenbat623/cafely",
       href: "https://cafely-phi.vercel.app",
       featured: true,
     },
