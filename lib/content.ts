@@ -56,7 +56,7 @@ export const marquee: T[] = [
   { en: "OPEN TO NEW OPPORTUNITIES", mn: "ШИНЭ БОЛОМЖИД НЭЭЛТТЭЙ" },
   { en: "FULL STACK DEVELOPER · PROGRAMMER", mn: "FULL STACK ХӨГЖҮҮЛЭГЧ · ПРОГРАММИСТ" },
   { en: "REACT · NEXT.JS · TYPESCRIPT · NODE.JS", mn: "REACT · NEXT.JS · TYPESCRIPT · NODE.JS" },
-  { en: "28 PROJECTS SHIPPED", mn: "28 ТӨСӨЛ ХИЙЖ ДУУСГАСАН" },
+  { en: "29 PROJECTS SHIPPED", mn: "29 ТӨСӨЛ ХИЙЖ ДУУСГАСАН" },
   { en: "BASED IN ULAANBAATAR · REMOTE WORLDWIDE", mn: "УЛААНБААТАРТ · REMOTE АЖИЛЛАНА" },
 ];
 
@@ -141,9 +141,9 @@ export const numbers = {
   items: [
     // Бүгд бодит өгөгдлөөс тоологдсон — төслийн жагсаалт, ур чадварын жагсаалт,
     // GitHub профайлаас. Шинэ ажил нэмэгдэх бүрд эдгээрийг шинэчилнэ.
-    { value: 28, suffix: "", label: { en: "projects built", mn: "бүтээсэн төсөл" } },
+    { value: 29, suffix: "", label: { en: "projects built", mn: "бүтээсэн төсөл" } },
     { value: 22, suffix: "", label: { en: "public GitHub repos", mn: "нээлттэй GitHub repo" } },
-    { value: 21, suffix: "", label: { en: "live deployments", mn: "ажиллаж буй deploy" } },
+    { value: 22, suffix: "", label: { en: "live deployments", mn: "ажиллаж буй deploy" } },
     { value: 46, suffix: "", label: { en: "tools and technologies", mn: "хэрэгсэл, технологи" } },
     { value: 4, suffix: "", label: { en: "companies worked with", mn: "компанид ажилласан" } },
     { value: 3, suffix: "", label: { en: "years writing code", mn: "жил код бичиж байна" } },
@@ -236,6 +236,19 @@ export const work = {
   repoCta: { en: "Code", mn: "Код" } satisfies T,
   soon: { en: "Coming soon", mn: "Тун удахгүй" } satisfies T,
   items: [
+    {
+      name: "Cafely — Restaurant & Coffee Shop Platform",
+      year: { en: "Aug 2026", mn: "2026 оны 8 сар" },
+      description: {
+        en: "A modern SaaS platform for coffee shops and restaurants to launch their digital website and interactive QR menu in minutes. Features 12 customizable design themes, real-time menu management, table reservations, Google Maps integration, and bilingual support.",
+        mn: "Ресторан, кофе шопуудад зориулсан цахим вэб сайт болон интерактив QR цэс бүтээгч SaaS платформ. 12 бэлэн дизайн загвар, өнгө фонтын тохиргоо, цэсний бүрэн удирдлага, ширээний онлайн захиалга, Google Maps байршил, хос хэлний дэмжлэгтэй.",
+      },
+      tags: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "SQLite / libSQL", "Three.js"],
+      image: "/img/projects/cafely.jpg",
+      category: "web app",
+      href: "https://cafely-phi.vercel.app",
+      featured: true,
+    },
     {
       name: "Personal Life OS",
       year: { en: "Aug 2026 - Present", mn: "2026 оны 8 сар - Одоо" },
